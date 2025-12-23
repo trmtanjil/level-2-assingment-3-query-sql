@@ -5,8 +5,6 @@ Admins can manage users, vehicles, and bookings.
 
  Features
 
-User Registration & Login
-
 Role Based Access: Admin & Customer
 
 Book a vehicle with start & end date
@@ -15,16 +13,12 @@ Calculate total booking cost
 
 Booking Status: pending, confirmed, completed, cancelled
 
-Admin can view all bookings
-
 Customer can view own bookings
 
  Technologies Used
  
 
 Database: PostgreSQL
-
- 
 
  Database Main Tables
 
