@@ -126,8 +126,7 @@ select * from  bookings
 
 
 
---   Query 1: JOIN Retrieve booking information along with: Customer name  Vehicle name
--- Concepts used: INNER JOIN
+--   Query 1: JOIN  
   SELECT 
     bookings.booking_id,
     users.name AS customer_name,
@@ -142,21 +141,21 @@ JOIN vehicles ON bookings.vehicle_id = vehicles.vehicle_id;
  
 
 
-  -- query no 2 
+  -- Query 2: EXISTS
   select * from vehicles 
   where not  exists(
   select from bookings 
   where bookings.vehicle_id= vehicles.vehicle_id
   )
 
--- quary 3 no
+-- Query 3: WHERE
 
   select * from vehicles
   where  status= 'available' and  type = 'car'
 
   
   
--- query no 4 
+-- Query 4: GROUP BY and HAVING
 select vehicles.name,
 count(bookings.booking_id) as total_bookings
 from bookings join vehicles on bookings.vehicle_id= vehicles.vehicle_id
